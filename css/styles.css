@@ -30,9 +30,20 @@ ul {
     margin: 0;
 }
 .container {
-    width: 1158px;
-    padding: 0 15px;
+    max-width: 320px;
+    padding: 0 16px;
     margin: 0 auto;
+}
+@media screen and (min-width: 768px) {
+    .container {
+    max-width: 768px;
+    }
+}
+@media screen and (min-width: 1158px) {
+    .container {
+        max-width: 1158px;
+        padding: 0 15px;
+    }
 }
 .header-container {
     display: flex;
@@ -58,6 +69,7 @@ ul {
         text-transform: uppercase;
         text-decoration: none;
         margin-right: 76px;
+        padding: 17px 0;
 }
 .header-logo-studio {
     color: var(--NAVY-BLUE, #2E2F42);
@@ -69,8 +81,7 @@ ul {
         text-decoration: none;
 }
 .page-nav {
-    display: flex;
-    gap: 40px;
+    display: none;
 }
 .page-nav-item {
     color: var(--NAVY-BLUE, #2E2F42);
@@ -102,6 +113,7 @@ ul {
 .contacts {
     font-style: normal;
     margin-left: auto;
+    display: none;
 }
 .contacts-list {
     display: flex;
@@ -437,9 +449,6 @@ ul {
  }
  .footer-email-input-container {
     margin-left: 80px;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
  }
  .footer-subscribe-text {
         font-weight: 500;
@@ -575,7 +584,6 @@ ul {
 }
 .feedback-form-input-box {
     position: relative;
-    margin-bottom: 16px;
 }
 .feedback-form-input {
     width: 100%;
